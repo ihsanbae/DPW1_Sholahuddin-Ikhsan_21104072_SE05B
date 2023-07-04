@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Harga - Pembalian Barang</title>
+</head>
+
+<body>
+
+    <script>
+
+        function hitung() {
+
+
+
+            let totalHarga = 0;
+            let arrBarang = [
+                ['B001', 'Barang A', 10000, 5],
+                ['B002', 'Barang B', 15000, 3],
+                ['B003', 'Barang C', 20000, 2],
+
+            ];
+            console.log(arrBarang);
+
+            for (let i = 0; i < arrBarang.length; i++) {
+                totalHarga += arrBarang[i][2] * arrBarang[i][3];
+            }
+
+            document.getElementById('totalHarga').innerHTML = totalHarga;
+
+        }
+
+
+    </script>
+
+
+    <h1>Pembelian Barang</h1>
+    <button onclick="hitung()">Hitung Total Harga</button>
+    <p>Total Harga : <span id="totalHarga"></span></p>
+
+
+</body>
+
+</html>
